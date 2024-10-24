@@ -1,0 +1,80 @@
+<!-- <div class="container">
+<img src="images/LandingPage.PNG" alt="Centered Image">
+</div>
+<div>
+<h1>login</h1>
+
+
+<form #LoginInfo="ngForm" (ngSubmit)="LoginUser(LoginInfo)">
+
+    <label for="username"> username </label>
+    <input type="text" name="username" ngModel required><br><br>
+
+    <label> Password </label>
+    <input type="password" name="password" ngModel><br><br>
+
+    
+    <button type="submit">Login</button>
+    
+</form>
+<div [ngClass]="{'success': isSuccess, 'error': isSuccess === false}"> 
+<h1>{{result}}</h1>
+</div>
+<br>
+<table *ngIf="isSuccess" border="3">
+    <tr>
+      <td><a class="mylink" routerLink="listofpassengers">List</a></td>
+      <td><a class="mylink" routerLink="search">Search</a></td>
+      <td><a class="mylink" routerLink="delete">Delete</a></td>
+       <td><a class="mylink" routerLink="add">Add</a></td> 
+       <td><a class="mylink" routerLink="update">Update</a></td> 
+    </tr>
+  </table>
+
+  <router-outlet></router-outlet>
+ -->
+
+
+
+
+ <div class="image-container">
+  <img src="images/LandingPage.PNG" alt="Centered Image">
+</div>
+<br>
+ 
+ <div class="container">
+  <div class="backgroundImage">
+      <div class="login-form-container">
+          <h1>Login</h1>
+          <form #LoginInfo="ngForm" (ngSubmit)="LoginUser(LoginInfo)">
+             <strong> <label for="username">Username</label></strong>
+              <input type="text" name="username" ngModel required placeholder="Enter your username"><br><br>
+
+             <strong> <label for="password">Password</label></strong>
+              <input type="password" name="password" ngModel required placeholder="Enter your password"><br><br>
+
+              <button type="submit" class="login-btn">Login</button>
+          </form>
+
+          <div [ngClass]="{'success': isSuccess, 'error': isSuccess === false}">
+              <h1>{{result}}</h1>
+          </div>
+      
+
+<!-- Navigation Table, displayed after successful login -->
+<div *ngIf="isSuccess" class="nav-table">
+  <table border="3">
+      <tr>
+          <td><a class="mylink" routerLink="listofpassengers">List</a></td>
+          <td><a class="mylink" routerLink="search">Search</a></td>
+          <td><a class="mylink" routerLink="delete">Delete</a></td>
+          <td><a class="mylink" routerLink="add">Add</a></td>
+          <td><a class="mylink" routerLink="update">Update</a></td>
+      </tr>
+  </table>
+</div>
+</div>
+</div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: center; /* Horizontal Centering */
+  align-items: center;     /* Vertical Centering */
+  height: 100px;           /* Make container take full viewport height */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* component.css */
+.contact-cards {
+    display: flex; /* Enables flexbox for the cards */
+    justify-content: space-around; /* Evenly space the cards */
+    padding: 20px; /* Adds padding around the container */
+  }
+  
+  .card {
+    background-color: #f9f9f9; /* Light background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for 3D effect */
+    padding: 20px; /* Adds padding inside the card */
+    max-width: 300px; /* Sets a maximum width */
+    text-align: center; /* Centers the text inside */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+  }
+  
+  .card:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* White text color on hover */
+  }
+  
+  .card-icon img {
+    width: 50px; /* Adjust the width of the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between icon and title */
+  }
+  
+  .card h2 {
+    font-size: 18px; /* Adjust font size */
+    margin-bottom: 15px; /* Space between title and description */
+    font-weight: 600; /* Semi-bold font weight */
+  }
+  
+  .card p {
+    font-size: 14px; /* Adjust font size */
+    color: #666; /* Gray text color */
+    margin: 5px 0; /* Space between paragraphs */
+  }
+  
+  .card:hover h2,
+  .card:hover p {
+    color: #fff; /* Change text color to white on hover */
+  }
+  

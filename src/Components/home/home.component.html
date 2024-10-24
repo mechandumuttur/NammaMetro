@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="backgroundImage">
+    <img src="images/Home1.jpg" alt="train Image" class="responsive-image">
+  </div>
+  <div class="main-content">
+    <div class="left-column">
+      <form>
+        <label for="fromStation">From Station:</label>
+        <select id="fromStation" [(ngModel)]="fromStation" name="fromStation">
+          <option value="" disabled selected>Select a station</option>
+          <option value="1">Nagasandra</option>
+          <option value="2">Dasarahalli</option>
+          <option value="3">Jalahalli</option>
+          <option value="4">Peenya Industry</option>
+          <option value="5">Peenya</option>
+          <option value="6">Goraguntepalya</option>
+          <option value="7">Yeshwantpur</option>
+          <option value="8">Sandal Soap Factory</option>
+          <option value="9">Mahalaxmi</option>
+          <option value="10">Rajajinagar</option>
+          <option value="11">Kuvempu Road</option>
+          <option value="12">Shrirampura</option>
+          <option value="13">Sampige Road</option>
+          <option value="14">Majestic</option>
+          <option value="15">Chikpete</option>
+          <option value="16">K.R.Market</option>
+          <option value="17">National College</option>
+          <option value="18">Lalbagh</option>
+          <option value="19">South End Circle</option>
+          <option value="20">Jayanagar</option>
+          <option value="21">R.V.Road</option>
+          <option value="22">Banashankari</option>
+          <option value="23">Jayaprakash Nagar</option>
+          <option value="24">Yelachenahalli</option>
+          <option value="25">Mysuru Road</option>
+          <option value="26">Deepanjali Nagar</option>
+          <option value="27">Attiguppe</option>
+          <option value="28">Vijayanagar</option>
+          <option value="29">Hosahalli</option>
+          <option value="30">Magadi Road</option>
+          <option value="31">KSR Railway Station</option>
+          <option value="32">Sir M.V.Central College</option>
+          <option value="33">Vidhana Soudha</option>
+          <option value="34">Cubbon Park</option>
+          <option value="35">M.G.Road</option>
+          <option value="36">Trinity</option>
+          <option value="37">Ulsoor</option>
+          <option value="38">Indira Nagar</option>
+          <option value="39">S.V.Road</option>
+          <option value="40">Baiyyappanahalli</option>
+        </select>
+        <br>
+        <br>
+        <label for="toStation">To Station:</label>
+        <select id="toStation" [(ngModel)]="toStation" name="toStation">
+          <option value="" disabled selected>Select a station</option>
+          <option value="1">Nagasandra</option>
+          <option value="2">Dasarahalli</option>
+          <option value="3">Jalahalli</option>
+          <option value="4">Peenya Industry</option>
+          <option value="5">Peenya</option>
+          <option value="6">Goraguntepalya</option>
+          <option value="7">Yeshwantpur</option>
+          <option value="8">Sandal Soap Factory</option>
+          <option value="9">Mahalaxmi</option>
+          <option value="10">Rajajinagar</option>
+          <option value="11">Kuvempu Road</option>
+          <option value="12">Shrirampura</option>
+          <option value="13">Sampige Road</option>
+          <option value="14">Majestic</option>
+          <option value="15">Chikpete</option>
+          <option value="16">K.R.Market</option>
+          <option value="17">National College</option>
+          <option value="18">Lalbagh</option>
+          <option value="19">South End Circle</option>
+          <option value="20">Jayanagar</option>
+          <option value="21">R.V.Road</option>
+          <option value="22">Banashankari</option>
+          <option value="23">Jayaprakash Nagar</option>
+          <option value="24">Yelachenahalli</option>
+          <option value="25">Mysuru Road</option>
+          <option value="26">Deepanjali Nagar</option>
+          <option value="27">Attiguppe</option>
+          <option value="28">Vijayanagar</option>
+          <option value="29">Hosahalli</option>
+          <option value="30">Magadi Road</option>
+          <option value="31">KSR Railway Station</option>
+          <option value="32">Sir M.V.Central College</option>
+          <option value="33">Vidhana Soudha</option>
+          <option value="34">Cubbon Park</option>
+          <option value="35">M.G.Road</option>
+          <option value="36">Trinity</option>
+          <option value="37">Ulsoor</option>
+          <option value="38">Indira Nagar</option>
+          <option value="39">S.V.Road</option>
+          <option value="40">Baiyyappanahalli</option>
+        </select>
+        <button class="check-fare-btn" type="button" (click)="checkFare()">Check Fare</button>
+      </form>
+    </div>
+    
+    
+    <div class="right-column" *ngIf="fare">
+      <div class="fare-section">
+        <p>Fare: {{ fare }} rupees</p>
+        <button class="book-ticket-btn" type="button" (click)="bookTicket()">Book Ticket</button>
+      </div>
+      
+      <div class="qr-section" *ngIf="ticketBooked">
+        <img src="images/metroQR.jpg" alt="QR code" />
+      </div>
+    </div>
+  </div>
+</div>

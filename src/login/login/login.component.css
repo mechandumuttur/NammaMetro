@@ -1,0 +1,89 @@
+
+ 
+
+
+  .image-container {
+    display: flex;
+    justify-content: center;  /* Aligns horizontally in the center */
+    align-items: center;      /* Aligns vertically in the center */
+    height: 100px;            /* Full viewport height */
+  }
+  
+  .image-container img {
+    max-width: 100%;          /* Ensure the image doesn't overflow */
+    height: auto;
+  }
+
+  /* Container for the entire login section */
+
+
+/* Background image for the login form */
+
+
+/* Form container with some transparency and centered text */
+.login-form-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 400px;
+  justify-content: center;
+}
+
+/* Styling the input fields */
+.login-form-container input {
+  width: 150px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styling */
+.login-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Button hover effect */
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+/* Success or error message styling */
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* Navigation table shown after login */
+.nav-table {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.nav-table table {
+  margin: 0 auto;
+}
+
+.nav-table a.mylink {
+  padding: 10px;
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.nav-table a.mylink:hover {
+  color: #45a049;
+}

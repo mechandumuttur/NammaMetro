@@ -1,0 +1,13 @@
+
+<!-- <button (click)="restData.getUpdateDetails()">Update</button> -->
+
+<form #updateInfo="ngForm" (ngSubmit)="restData.getUpdateDetails(updateInfo)">
+    <label>Enter Phone number</label>
+    <input type="number" name="phoneNo" ngModel>
+    <br><br>
+    <label>Enter Name to update</label>
+    <input type="text" name="username" ngModel>
+    <br><br>
+    <input type="submit" value="submit">
+</form>
+ 

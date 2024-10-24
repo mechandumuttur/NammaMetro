@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    justify-content: center; /* Horizontal Centering */
+    align-items: center;     /* Vertical Centering */
+    height: 100px;           /* Make container take full viewport height */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-container {
+    background-color: #c4f8c4; /* Light green background */
+    border: 2px solid greenyellow; /* Darker green border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h1, .form-container h4 {
+    color: #4caf50; /* Dark green for headers */
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+.form-container input[type="number"], 
+.form-container input[type="text"] {
+    width: 95%; /* Make inputs responsive */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #4caf50; /* Border color matching the theme */
+    border-radius: 4px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4caf50; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.table-container {
+    margin: 20px auto;
+    width: 80%; /* Adjust the width as needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Light background for the table */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4caf50; /* Dark green for table headers */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
+
+tr:hover {
+    background-color: #e8f5e9; /* Light green on row hover */
+}

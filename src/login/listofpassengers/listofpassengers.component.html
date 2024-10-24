@@ -1,0 +1,20 @@
+
+
+<button (click)="restData.getuserDetails()">Get List of Passengers</button>
+<br><br><br>
+
+<table border="5" *ngIf="restData.getdata"> 
+    <!-- *ngif="restdata.postdata"  so this will not display the table head until u click d button-->
+<tr>
+    <th>Phone Number</th>
+    <th>Name</th>
+    <th>Metrocard Number</th>
+    <th>Wallet Balance</th>
+</tr>
+<tr *ngFor="let item of restData.getdata">
+<td>{{item.phoneNo}}</td>
+<td>{{item.username}}</td>
+<td>{{item.cardId}}</td>
+<td>{{item.walletBalance}}</td>
+</tr>
+</table>

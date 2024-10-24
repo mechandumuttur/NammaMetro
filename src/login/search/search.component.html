@@ -1,0 +1,25 @@
+
+<form #searchInfo="ngForm" (ngSubmit)="restData.getSearchDetails(searchInfo)">
+
+   <label>Enter Phone to search</label>
+   <input type="number" name="phoneNo" ngModel> <br>
+ <br><br>
+   <input type="submit">
+ 
+   </form>
+<br><br>
+ <!-- Display the fetched data in a table -->
+<table border="5" *ngIf="restData.storedata.length > 0"> 
+    <tr>
+      <th>Phone Number</th>
+      <th>Name</th>
+      <th>Metrocard Number</th>
+      <th>Wallet Balance</th>
+    </tr>
+    <tr *ngFor="let item of restData.storedata">
+      <td>{{item.phoneNo}}</td>
+      <td>{{item.username}}</td>
+      <td>{{item.cardId}}</td>
+      <td>{{item.walletBalance}}</td>
+    </tr>
+  </table>

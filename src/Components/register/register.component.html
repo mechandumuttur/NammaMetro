@@ -1,0 +1,46 @@
+<div class="container">
+  <img src="images/LandingPage.PNG" alt="Centered Image" class="header-image">
+</div>
+
+<div class="form-container">
+  <h1>Register Yourself to Get Metrocard</h1>
+  <form #addInfo="ngForm" (ngSubmit)="restData.getAddDetails(addInfo)">
+      <label>Enter Phone Number</label>
+      <input type="number" name="phoneNo" ngModel required>
+      <br><br>
+      <label>Enter User Name</label>
+      <input type="text" name="username" ngModel required>
+      <br><br>
+      <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="form-container">
+  <h4>Give Your Registered Phone Number to Get the Card Details</h4>
+  <form #findInfo="ngForm" (ngSubmit)="restData.getSearchDetails(findInfo)">
+      <label>Enter Phone Number</label>
+      <input type="number" name="phoneNo" ngModel required>
+      <br><br>
+      <input type="submit" value="Get Metrocard">
+  </form>
+</div>
+
+<br><br>
+
+<!-- Display the fetched data in a table -->
+<div class="table-container" *ngIf="restData.storedata.length > 0">
+  <table border="5"> 
+      <tr>
+          <th>Phone Number</th>
+          <th>User Name</th>
+          <th>Card ID</th>
+          <th>Wallet Balance</th>
+      </tr>
+      <tr *ngFor="let item of restData.storedata">
+          <td>{{item.phoneNo}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.cardId}}</td>
+          <td>{{item.walletBalance}}</td>
+      </tr>
+  </table> 
+</div>

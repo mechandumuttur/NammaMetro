@@ -1,0 +1,11 @@
+
+<form #addInfo="ngForm" (ngSubmit)="restData.getAddDetails(addInfo)">
+        <label>Enter Phone Number</label>
+        <input type="number" name="phoneNo" ngModel>
+    <br><br>
+        <label>Enter User Name</label>
+        <input type="text" name="username" ngModel>
+    <br><br>
+        <input type="submit" value="submit">
+</form>
+ 

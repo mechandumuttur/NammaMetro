@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center; /* Horizontal Centering */
+  align-items: center;     /* Vertical Centering */
+  height: 80px;           /* Make container take full viewport height */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* component.css */
+.content-wrapper {
+    display: flex; /* Enables flexbox layout */
+    align-items: flex-start; /* Aligns items at the top */
+    justify-content: space-between; /* Ensures space between text and image sections */
+    padding: 20px; /* Adds padding around the container */
+  }
+  
+  .text-section {
+    flex: 2; /* Takes up two-thirds of the space */
+    max-width: 60%; /* Optional: Limits the width of the text section */
+    padding-right: 20px; /* Adds space between the text and images */
+  }
+  
+  .image-section {
+    flex: 1; /* Takes up one-third of the space */
+    display: flex; /* Enables flexbox for this container */
+    flex-direction: column; /* Aligns images vertically */
+    align-items: center; /* Centers images horizontally */
+  }
+  
+  .logo {
+    width: 600px; /* Adjust the size of the images */
+    height: 450px; /* Maintains the aspect ratio */
+    margin-bottom: 10px; /* Adds space between images */
+  }
+  
+  @media (max-width: 768px) {
+    /* Responsive design for smaller screens */
+    .content-wrapper {
+      flex-direction: column; /* Stacks text and image sections vertically */
+      align-items: center; /* Centers content */
+      text-align: center; /* Centers text */
+    }
+  
+    .text-section {
+      max-width: 100%; /* Full width for smaller screens */
+      padding-right: 0; /* Remove right padding */
+      margin-bottom: 20px; /* Adds space below text section */
+    }
+  
+    .image-section {
+      flex-direction: row; /* Arrange images in a row */
+      flex-wrap: wrap; /* Allows wrapping of images if necessary */
+      justify-content: center; /* Centers images */
+    }
+  
+    .logo {
+      width: 80px; /* Adjust size for smaller screens */
+      margin: 10px; /* Adds space around images */
+    }
+  }
+  
